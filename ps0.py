@@ -8,10 +8,8 @@ This is a temporary script file.
 #ps0
 
 import math
-print("Enter number x: ")
-x = int(input())
-print("Enter number y: ")
-y = int(input())
+x = int(input("Enter number x: "))
+y = int(input("Enter number y: "))
 result = x**y
 print("x**y = ",result)
 print("log(x) = ", int(math.log(x,2)))
