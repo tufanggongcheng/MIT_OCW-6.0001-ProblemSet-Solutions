@@ -24,7 +24,7 @@ while abs(current_savings - total_cost) > 100 and guess < 9999:
     guess = (low + high)/2
     steps += 1
     current_savings = 0
-    for months in range(35):
+    for months in range(36):
         current_savings = current_savings * (1 + 0.04/12) + guess/10000 * annual_salary/12 * 1.07**(abs(months/6))
     
 if guess < 9999:
