@@ -139,7 +139,7 @@ def hangman(secret_word):
     consonants = list(string.ascii_lowercase)
     for char in vowels:
         consonants.remove(char)
-    while n > 0 :
+    while n > 0 and not is_word_guessed(secret_word, letters_guessed):
         print("You have", n, "guesses left.")
         print("Available letters: " + get_available_letters(letters_guessed))
         new_letter = input("Please guess a letter: ").lower()[0]
@@ -173,6 +173,10 @@ def hangman(secret_word):
         print("-----------------------------------")
     if n <= 0 :
         print("Sorry, you ran out of guesses. The word was " + secret_word)
+    if is_word_guessed(secret_word, letters_guessed):
+        print("Congratulations, you won!")
+        print("Your total score for this game is: ", n*len(score_list))
+
 
         
 
